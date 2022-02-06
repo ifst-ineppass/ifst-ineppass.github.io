@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <meta name="format-detection" content="telephone=no">
+    <title>IFST下载</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="IFST">
+    <meta name="keywords" content="IFST">
+    <!-- <link href="css/jquery.countdown.css" rel="stylesheet" type="text/css" /> -->
+    <style>*{padding:0;margin:0}
+        html{font-size:10px;}
+        a{text-decoration:none}
+        img{display:block;clear:both;width:100%;vertical-align:top;-ms-interpolation-mode:bicubic;border:0;}
+        .contain{max-width:750px;margin:0 auto;}
+        .one{position:relative;}
+        .top{width:100%;height:100%;}
+        .logo{position:absolute;top:20%;left:10%;width:80%;}
+        .one .tk{position:absolute;top:74%;left:26%;width:46%;}
+        .one .tk img{display:block;clear:both;vertical-align:top;-ms-interpolation-mode:bicubic;border:0;
+        }
+        .one .top-banner{
+            display: block;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            margin-left: -85px;
+            width: 170px;
+        }
+        .two{background: #FAFAFA;/*padding:10% 0;*/}
+        .txt{ width:70%; margin: 0 auto;}
+        .two .pic{ width: 65%; margin:8% 12% 0 23%;}
+        .three{background: #FAFAFA;/*padding:10% 0;*/}
+        .three .pic{ width: 65%; margin:8% 12% 0 23%;}
+        .four{background:#fff;/*padding: 10% 0;*/    position: relative;}
+        .four .download{position: absolute; top: 70%;left:30%; width: 40%;}
+        .four .pic{ width: 94%; margin:8% 3% 0;}
+        .send{ width:56%;margin:5% auto 7%;}
+        .download{width: 46%; cursor: pointer; margin: 0 auto;}
+        .download a{outline: none;border: none;}
+        .foot{ position: absolute; left: 0;bottom:-3px;}
+        .zhezhao{position: fixed;z-index: 98;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.65);}
+        .zhezhao img{float: right;max-width: 90%;margin-right: 1%;}
+        .backtop {position: fixed;bottom: 3.5%;right:3.5%;z-index: 999;}
+        .backtop img{width: 20px;}
+        .hide {display: none;}
+    </style>
+    
+
+<script type="text/javascript">
+  document.write=function() {};
+  document.writeln=function() {};
+</script>
+
+<script type="text/javascript" src="js/url.js"></script>
+    <!-- <script src="http://cdn.bootcss.com/lodash.js/3.10.1/lodash.js"></script> -->
+    <script type="text/javascript" src="js/location%EF%B9%96t=20200226.js"></script>
+    <script>
+      // var ua = window.navigator.userAgent;
+      // var campaign = url.utm_campaign;
+      // var term = url.utm_term;
+
+      if (!(/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile/.test(ua))) {
+        // if(_.isUndefined(campaign) || _.isUndefined(term)){
+            // window.location.href = pc_url;
+        // }else{
+            // window.location.href = pc_url + '?utm_campaign=' + campaign + '&utm_term=' + term;
+        // }
+        if(window.location.search.indexOf('?')===-1){
+            window.location.href = pc_url + "?"+Math.floor(Math.random()*1000000)
+        }else{
+            window.location.href = pc_url + window.location.search;
+        }
+    }else{    
+         
+      if(window.location.search.indexOf('?')===-1){
+        window.location.href += "?"+Math.floor(Math.random()*1000000);
+      }
+
+   }
+    </script>
+    <!-- piwik -->
+    <!-- <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//piwik.dmall.com/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 2]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p>< img src="//piwik.dmall.com/piwik.php?idsite=2" style="border:0;" alt="" /></p ></noscript> -->
+    <!-- End Piwik Code -->
+</head>
+<body style="">
+    <section id="box">
+        <div id="pageContain" class="contain">
+            <section class="one">
+                <!--政府要求增加banner，8月1号之后去除-->
+<!--                <img class="top-banner" src="https://img.dmallcdn.com/dshop/202107/eb75c32c-faf5-4530-b336-71e027677e84" alt="">-->
+                <!-- 替换图片的时候，将这里进行来回切换 -->
+<!--                <img src="https://dqr2022.oss-cn-beijing.aliyuncs.com/img/tpage1.png?versionId=CAEQFhiBgIDPgP_w9BciIGNlZmUxMTQ4NzA2MzQwZWRhMzcyZDIwNWNmYzcwOGQz" class="top">-->
+				<img src="images/tpage1.png" class="top">
+                <div class="timer">
+                    <div class="digits">
+                    </div>
+                </div>
+
+                <div class="download tk">
+                    <a class="piwik_download" rv-on-click="source_info.openApp" style="-webkit-tap-highlight-color: rgba(255,0,0,0);">
+                        <img class="downloadBtn" src="images/tiphone.png">
+                    </a>
+                </div>
+            </section>
+         <!--    <section class="two">
+                <img src="https://dqr2022.oss-cn-beijing.aliyuncs.com/img/tpage2.png?versionId=CAEQFhiBgMCLgP_w9BciIGQyNDE4MmU3ZDViMDQwMGY5YWU1YjczNjMwNGY4YzQ2">
+            </section>
+            <section class="three">
+                <img src="https://dqr2022.oss-cn-beijing.aliyuncs.com/img/tpage3.png?versionId=CAEQFhiBgMDVgP_w9BciIGVkMDZjZThkOTM3NTRiNDZhYWFhN2JlMDZjNTQ0YWIz">
+            </section> -->
+
+        </div>
+        <div class="zhezhao" id="tip_pop" rv-show="bWeixin" rv-on-click="showWxDownLoad" style="display:none;">
+            <img id="tippic" src="images/open-browser-tips.png" alt="请点击右上角按钮，使用浏览器打开">
+        </div>
+        <div class="backtop hide"><img src="images/backTop.png"></div>
+    </section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/rivets.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.countdown.js"></script> -->
+<script type="text/javascript">
+    function getEvt() {
+        var href = window.location.href,
+            result = '';
+        if (href.indexOf('//test') > 0 && href.indexOf('//test.') == -1) {
+            result = '//test';
+        } else if (href.indexOf('//dev') > 0 && href.indexOf('//dev.') == -1) {
+            result = '//dev';
+        } else {
+            result = '//';
+        }
+        return result;
+    }
+    // var UA = window.navigator.userAgent;
+    // 终端
+    var os = {
+            'android': ua.match(/(Android);?[\s\/]+([\d.]+)?/),
+            'ios': ua.match(/(iPad|iPhone|iPod).*OS\s([\d_]+)/),
+//            'ipad': UA.match(/(iPad).*OS\s([\d_]+)/)
+        }
+    // 客户端
+    var client = {
+        // 'weixin': true
+        'weixin': ua.match(/.*?(MicroMessenger\/([0-9.]+))\s*/)
+    }
+    //根据不同系统平台 显示下载按钮
+    var downloadBtn = document.querySelectorAll('.downloadBtn');
+    if (os.ios) {
+        // downloadBtn[0].src = downloadBtn[1].src = 'http://app.dmall.com/m/images/iphone.png'
+        downloadBtn[0].src = 'images/tiphone.png';
+        // downloadBtn[1].src = 'images/tiphone.png'
+    } else {
+        // downloadBtn[0].src = downloadBtn[1].src = 'http://app.dmall.com/m/images/android.png'
+        downloadBtn[0].src = 'images/tandroid.png';
+        // downloadBtn[1].src = 'images/tandroid.png'
+    }
+    var backTop = $(".backtop");
+    $(window).scroll(function(){
+      var top = document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if(top > 200){
+        backTop.removeClass("hide");
+      }
+      else {
+        backTop.addClass("hide");
+      }
+    });
+
+    backTop.click(function(){
+      if(document.documentElement.scrollTop){
+        $(document.documentElement).animate({scrollTop:0},200,"linear");
+      }
+      if(document.body.scrollTop){
+        $(document.body).animate({scrollTop:0},200,"linear");
+      }
+    });
+    //设置微信浏览器覆盖层
+    // var wx = wx || {
+    //     bWeixin: false
+    // };
+    // function showWxDownLoad () {
+    //     wx.bWeixin = !wx.bWeixin;
+    // };
+    // wx.showWxDownLoad = function() {
+    //     wx.bWeixin = !wx.bWeixin;
+    // };
+
+    // if(client.weixin) {
+    //     source_info.download_url = 'javascript:showWxDownLoad();';
+    // }
+    // console.log(wx);
+    // rivets.bind(document.getElementById('tip_pop'), wx);
+    document.write("<script src='" + getEvt() + "js/dmallanlytic.js?t="+Date.now()+"'><\/script>");
+</script>
+<script type="text/javascript" src="js/request.js"></script>
+<!-- <script type="text/javascript">
+    function t2(t){
+    	t = Math.floor(t);
+    	if(isNaN(t)){
+    		return "00";
+    	}
+    	if(t >= 100){
+    		return "99";
+    	}
+    	if(t < 10){
+    		return "0" + t;
+    	}
+    	return t+"";
+    }
+	$(function() {
+		var now = new Date().getTime(),
+		start = 1459440000000,
+		end = 1459699200000,
+		delta = end - now,
+		h = t2(delta/(1000 * 60 * 60)),
+		m = t2(delta%(1000 * 60 * 60)/(1000 * 60)),
+		s = t2((delta%60000)/1000)
+		;
+		if(now < start || now >= end){
+			return;
+		}
+		$(".one .top").attr("src","images/countdown.png");
+		$(".digits").countdown({
+			image : "images/digits.png",
+			format : "hh:mm:ss",
+			startTime : h + ":" + m + ":" + s,
+			timerEnd:function(){
+				window.location.href = "http://app.dmall.com";
+			}
+		});
+		$(".cntSeparator").html("<img style='width:10px;' src='images/dian_03.png'>");
+	});
+	$(".download").find("a").on("click",function(){
+    	cd();
+    });
+</script> -->
+    <script type="text/javascript">
+        (function () {
+
+            var requestParam = getSearchParam();
+            var z_url_code = "";
+            for (var i in requestParam) {
+                if (i === 'z') {
+                    z_url_code = requestParam[i];
+                    break;
+                }
+            }
+            // 当key为z的query存在时，即为一码到底中转
+            if (z_url_code) {
+                var evt = window.location.href.indexOf("test") > -1 ? "//test" : "//";
+                var targetUrl = window.location.protocol + evt + "z.dmall.com/m/?z=" + z_url_code;
+                if (os.ios) {
+                    var ver=parseFloat(window.navigator.userAgent.toLowerCase().match(/cpu iphone os (.*?) like mac os/)[1].replace(/_/g,"."));
+                    // iOS可能是不需要处理的，但可能会有没装的情况，这里直接去落地页
+                    // 如果安装，常规情况下不可能到这个页面，除非universailLink失效了或者系统版本9以下
+                    // 或者是safari以外的浏览器，这里还是单独搞下
+                    if (!(/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent))||ver<9){
+                        window.location = "dmall://dmall/" + decodeURIComponent(targetUrl);
+
+                        setTimeout(() => {
+                            window.location.replace(targetUrl);
+                        }, 100)
+                        return false;
+                    }else{
+                        // var iframe = document.createElement("iframe");
+                        // iframe.src = targetUrl;
+                        // iframe.style = "display:block;position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:#fff"
+                        // console.warn(iframe)
+                        // document.body.append(iframe)
+                        //
+                        // document.getElementById("box").style.display="none";
+                        // window.location = "dmall://dmall/" + decodeURIComponent(targetUrl);
+
+                        setTimeout(() => {
+                            window.location.replace(targetUrl);
+                        }, 100)
+                        return false;
+                    }
+                } else {
+                    // Android下，所有场景都走Schema唤醒，但有可能不能自动拉起，这种鬼也没办法了
+                    // window.location = "dmall://dmall/app://home?@animate=null&@jump=true";
+                    window.location = "dmall://dmall/" + decodeURIComponent(targetUrl);
+                    setTimeout(() => {
+                        window.location.replace(targetUrl);
+                    }, 100)
+                    return false;
+                }
+                // 一切情况下Schema无法唤醒时，放弃唤醒前往落地页，不引导下载，由业务场景自行处理
+                // setTimeout(() => {
+                //     window.location.replace(targetUrl);
+                // }, 100)
+            }
+            document.body.style="";
+        })();
+    </script>
+
+
+</body></html>

@@ -1,0 +1,362 @@
+*,
+*:before,
+*:after{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html {
+    -ms-touch-action: none;
+    /* 阻止windows Phone 的默认触摸事件 */
+}
+
+body,
+div,
+p {
+    margin: 0;
+    padding: 0;
+}
+img{display: block;border: none;}
+ul {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    background-color: #fff;
+    *cursor: default;
+    overflow: hidden;
+    font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;
+    position: relative;
+    min-height: 600px;
+}
+
+/*clearfix*/
+.clearfix:before,.clearfix:after,
+.container:before,.container:after{content:""; display:table; }
+.clearfix:after,
+.container:after{clear:both;}
+.clearfix,
+.container{*zoom:1;/*IE/7/6*/ }
+
+/*原子类*/
+.fl{float: left!important;}.fr{float: right!important;}
+.tl{text-align: left}.tr{text-align: right;}.tc{text-align: center;}
+.mauto{margin-left: auto;margin-right: auto;}.mb70{margin-bottom: 70px;}
+.container{
+    margin-left: auto;margin-right: auto;
+    position: relative;
+}
+.container{
+    max-width: 1600px;
+    min-width: 1000px;
+    width: 90%;
+}
+
+/*header fixed*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    height: 70px;
+    background-color: #fff;
+    background-color: rgba(255,255,255,.7);
+    box-shadow: 0px 1px 3px rgba(0,0,0,.1);
+}
+.header .container{
+    padding-top: 17px;
+}
+.header .logo{
+    width: 114px;
+    height: 36px;
+}
+.header .logo img{width: 100%;}
+.header .menu a{
+    font-size: 24px;
+    line-height: 36px;
+    display: inline-block;
+    zoom: 1;
+    padding: 0 20px;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.header .menu .active,
+.header .menu .active:hover{
+    color: #e76442;
+}
+/*向下滚动提示*/
+.mod_start{
+    position:absolute;
+    z-index:9;left:50%;
+    margin-left:-50px;
+    bottom:10px;
+    width:100px;height:60px;
+    overflow:hidden;
+    text-align:center;
+}
+.mod_start .icon_slide{
+    margin-top: 8px;
+    display: inline-block;zoom: 1;
+    background: url(../images/icon-side-down.png) no-repeat;
+    width: 42px;height: 33px;
+}
+.icon_slide{-webkit-animation:start 2s infinite linear}
+@-webkit-keyframes start{
+    0%,50%{opacity:0;-webkit-transform:translate(0,-12px)}
+    75%{opacity:1;-webkit-transform:translate(0,-2px)}
+    100%{opacity:0;-webkit-transform:translate(0,8px)}
+}
+
+/*full page*/
+#pageContain {
+    overflow: hidden;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contain {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    z-index: 0;
+}
+.page .container{height: 100%;}
+
+.current .contain,
+.slide .contain {
+    display: block;
+}
+
+.current {
+    display: block;
+    z-index: 1;
+}
+
+.slide {
+    display: block;
+    z-index: 2;
+}
+
+.swipe {
+    display: block;
+    z-index: 3;
+    transition-duration: 0ms !important;
+    -webkit-transition-duration: 0ms !important;
+}
+
+.top-side,
+.bottom-side,
+.center-side,
+.right-side{
+    position: absolute;
+    width: 100%;
+}
+.page1 {
+    background: #ccc url(../images/banner-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.page1 .top-side{
+    top: 20%;
+    z-index: 10;
+}
+
+.page1 .bottom-side{
+    bottom: 17%;
+    z-index: 11;
+}
+.page1 .download a{
+    display: inline-block;
+    zoom:1;
+    margin: 0 10px;
+}
+.page1 .top-side img{max-width: 90%;}
+
+.page2 {
+    background: #fafafc;
+}
+.page2 .center-side{
+    top: 50%;
+    margin-top: -340px;
+    height: 673px;
+    width: 100%;
+}
+.page2 .dmall-intro-01{
+    margin-bottom: 90px;
+    margin-right: 10%;
+}
+
+.page3 {
+    background: #ffffff url(../images/phone-fruit.jpg) 35% 60% no-repeat;
+}
+
+.page3 .right-side{
+    top: 28%;
+    left: 64%;
+
+}
+
+.page4 {
+    background: #ffce54 url(../images/dmall-product.jpg) top center repeat-x;
+}
+.page4 .top-side{
+    top: 10%;
+    z-index: 10;
+}
+.page4 .download{margin-top: 2%;}
+.page4 .download a{
+    display: inline-block;
+    zoom:1;
+    width: 133px; height: 115px;
+    margin: 0 10px;
+}
+.page4 .download a img{width: 100%;}
+.page4 .bottom-side{
+    top: 65%;
+    z-index: 9;
+}
+
+.app-order-bd{
+    border: 15px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    width: 340px;height: 340px;
+    overflow: hidden;
+}
+.app-order-bd .dmall-intro-03{
+    background-color: #fff;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+
+/*nav bar*/
+#navBar {
+    z-index: 3;
+    position: absolute;
+    top: 40%;
+    right: 3%;
+}
+
+#navBar li {
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: all .5s ease;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    text-indent: -300%;
+    background: #ccc;
+    background: rgba(200,200,200,.4);
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+#navBar li:hover{background: rgba(200,200,200,.7);}
+#navBar .active {
+    background: #e76442;
+    background: rgba(255,255,255,1);
+}
+
+
+/*common*/
+.disable{
+    color: #929292;
+}
+.dmall-intro-01,
+.dmall-intro-02,
+.dmall-intro-03{
+    overflow: hidden;
+    display: inline-block;
+    zoom:1;
+    font-size:0; line-height:0;
+}
+.dmall-intro-01{
+    background: url(../images/dmall-app-intro-01.png) no-repeat;
+    width: 431px;height: 424px;
+}
+.dmall-intro-02{
+    background: url(../images/dmall-app-intro-02.png) no-repeat;
+    width: 361px;height: 212px;
+}
+.dmall-intro-03{
+    background: url(../images/dmall-app-intro-03.png) center no-repeat;
+    width: 310px;height: 310px;
+}
+.dmall-phone-demo{
+    background: url(../images/dmall-phone-demo.jpg) no-repeat;
+    width: 496px;height: 673px;
+    display: inline-block;
+}
+.dmall-app-order{
+    background: url(../images/dmall-app-order.jpg) no-repeat;
+    width: 733px;height: 476px;
+    display: inline-block;
+}
+
+/*二维码弹出层*/
+
+.qrcode-box{
+    width: 140px;height: 140px;
+    padding: 10px;
+    position: fixed;
+    bottom: 3%;right: 2%;
+    z-index: 10000;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.qrcode-box img{width: 100%;}
+
+/*[1024*768] [1366*768] [1280*800] [1440*900] [1600*900] 除去系统和浏览器所占高度>128*/
+
+@media all and (min-height: 600px) and (max-height: 799px),(max-height: 599px){
+/*    .mb70{margin-bottom: 20px;}*/
+    .top-side,
+    .bottom-side,
+    .center-side,
+    .right-side,
+    .icon_slide{
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+    .page1 .top-side{top: 10%;}
+    .page1 .bottom-side{bottom: 15%;}
+    .page2 .dmall-intro-01{margin-right: 6%;}
+    .page3{background-size:auto 70%;}
+    .page4{background-size: 80% auto;}
+    .page4 .top-side{top: 3%;}
+    .page4 .bottom-side{top: 60%;}
+    .page4 .download a img{width: 96%;}
+}
+@media all and (min-height: 800px) and (max-height: 899px){
+    .top-side,
+    .bottom-side,
+    .center-side,
+    .right-side,
+    .icon_slide{
+        -webkit-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+        -o-transform: scale(0.85);
+        transform: scale(0.85);
+    }
+    .page3{background-size:auto 70%;}
+    .page1 .top-side{top: 15%;}
+
+}
